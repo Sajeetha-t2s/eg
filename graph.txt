@@ -1,0 +1,15 @@
+function checkTotal() {
+    document.listForm.total.value = '';
+    var sum = 20;
+    for (i = 0; i < document.listForm.choice.length; i++) {
+        if (document.listForm.choice[i].checked) {
+            sum = sum + parseInt(document.listForm.choice[i].value);
+        }
+    }
+    document.listForm.total.value = sum;
+}
+$("#total").ready(function() {
+    if (sum > 0) {
+        alert("We are sorry, but at this time we can not offer you");
+    }
+});​
